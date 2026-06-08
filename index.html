@@ -1125,22 +1125,6 @@
 
     fadeEls.forEach(el => observer.observe(el));
 
-    // Skill bars animation on intersection
-    const barObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animated');
-          barObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.3 });
-
-    skillBars.forEach(bar => {
-      // Reset initial scale via JS to ensure animation works
-      bar.style.transform = 'scaleX(0)';
-      barObserver.observe(bar);
-    });
-
     // ── 6. PROJECT CARD FILTER ────────────────────────────────
     const filterBtns = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');

@@ -1191,20 +1191,32 @@ body {
   height: 100%;
   border-radius: 100px;
   background: linear-gradient(90deg, var(--accent-cyan), #00c4a7);
-  box-shadow: 0 0 8px rgba(0, 245, 212, 0.5);  /* neon glow */
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 10px rgba(0, 245, 212, 0.6);
+  /* Dùng animation CSS thuần, không cần JS */
+  animation: barGrow 1.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.3s;
 }
 
 .skill-bar-fill--purple {
   background: linear-gradient(90deg, var(--accent-purple-l), var(--accent-cyan));
-  box-shadow: 0 0 8px rgba(157, 78, 221, 0.5);
+  box-shadow: 0 0 10px rgba(157, 78, 221, 0.6);
 }
 
-.skill-bar-fill.animated {
-  transform: scaleX(1);
+/* Stagger delay cho từng bar */
+.skill-bar-item:nth-child(1) .skill-bar-fill { animation-delay: 0.2s; }
+.skill-bar-item:nth-child(2) .skill-bar-fill { animation-delay: 0.35s; }
+.skill-bar-item:nth-child(3) .skill-bar-fill { animation-delay: 0.50s; }
+.skill-bar-item:nth-child(4) .skill-bar-fill { animation-delay: 0.65s; }
+.skill-bar-item:nth-child(5) .skill-bar-fill { animation-delay: 0.80s; }
+.skill-bar-item:nth-child(6) .skill-bar-fill { animation-delay: 0.95s; }
+
+@keyframes barGrow {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0% 0 0); }
 }
+
+/* Class cũ giữ lại để không vỡ JS cũ */
+.skill-bar-fill.animated { /* không cần gì */ }
 
 /* Main reflection quote */
 .reflection-main {}
