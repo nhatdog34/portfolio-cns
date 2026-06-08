@@ -1151,31 +1151,55 @@ body {
   margin-top: 0.8rem;
   display: flex;
   flex-direction: column;
-  gap: 0.7rem;
+  gap: 0.9rem;
+}
+
+.skill-bar-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 
 .skill-bar-label {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 0.75rem;
   color: var(--text-secondary);
-  margin-bottom: 0.2rem;
+}
+
+.skill-pct {
+  font-family: var(--font-code);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent-cyan);
+  background: rgba(0, 245, 212, 0.1);
+  border: 1px solid rgba(0, 245, 212, 0.25);
+  padding: 1px 6px;
+  border-radius: 100px;
 }
 
 .skill-bar-track {
-  height: 5px;
-  background: rgba(255,255,255,0.05);
-  border-radius: 3px;
+  height: 8px;                          /* taller = dễ nhìn hơn */
+  background: rgba(255, 255, 255, 0.12); /* sáng hơn để tạo tương phản */
+  border-radius: 100px;
   overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
 .skill-bar-fill {
   height: 100%;
-  border-radius: 3px;
-  background: linear-gradient(90deg, var(--accent-purple), var(--accent-cyan));
+  border-radius: 100px;
+  background: linear-gradient(90deg, var(--accent-cyan), #00c4a7);
+  box-shadow: 0 0 8px rgba(0, 245, 212, 0.5);  /* neon glow */
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.skill-bar-fill--purple {
+  background: linear-gradient(90deg, var(--accent-purple-l), var(--accent-cyan));
+  box-shadow: 0 0 8px rgba(157, 78, 221, 0.5);
 }
 
 .skill-bar-fill.animated {
@@ -1184,6 +1208,138 @@ body {
 
 /* Main reflection quote */
 .reflection-main {}
+
+/* ── Score Summary ─────────────────────────────────── */
+.score-summary-card .score-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-top: 0.8rem;
+}
+
+.score-item {
+  text-align: center;
+  background: rgba(0, 245, 212, 0.06);
+  border: 1px solid rgba(0, 245, 212, 0.15);
+  border-radius: var(--radius-md);
+  padding: 0.6rem 0.4rem;
+}
+
+.score-num {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple-l));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.score-label {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ── Timeline ──────────────────────────────────────── */
+.timeline-section {
+  margin-top: 2rem;
+}
+
+.timeline-heading {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+/* Vertical line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg,
+    var(--accent-cyan),
+    var(--accent-purple),
+    var(--accent-cyan));
+  border-radius: 1px;
+  opacity: 0.4;
+}
+
+.tl-item {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1.4rem;
+  position: relative;
+}
+
+.tl-dot {
+  position: absolute;
+  left: -1.5rem;
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid;
+  background: var(--bg-primary);
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.tl-dot--cyan {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 8px rgba(0, 245, 212, 0.5);
+}
+
+.tl-dot--purple {
+  border-color: var(--accent-purple-l);
+  box-shadow: 0 0 8px rgba(157, 78, 221, 0.5);
+}
+
+.tl-content {
+  padding-left: 0.25rem;
+}
+
+.tl-week {
+  font-family: var(--font-code);
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--accent-cyan);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.15rem;
+}
+
+.tl-title {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.tl-desc {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
 
 .quote-block {
   position: relative;
