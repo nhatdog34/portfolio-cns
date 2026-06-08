@@ -1505,6 +1505,19 @@ body {
 }
 
 /* ── 16. ACTIVE NAV LINK HIGHLIGHT ───────────────────────────── */
+
+/* CV Download button — loading/disabled state */
+#cta-download-cv:disabled {
+  opacity: 0.7;
+  cursor: wait;
+  pointer-events: none;
+}
+
+#cta-download-cv:disabled::before {
+  display: none; /* tắt shimmer animation khi loading */
+}
+
+
 .nav-links a.active {
   color: var(--accent-cyan);
 }

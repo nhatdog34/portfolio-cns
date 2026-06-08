@@ -26,6 +26,9 @@
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- html2pdf.js — tự động tạo PDF client-side, không cần server -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
 
@@ -136,10 +139,9 @@
             <a href="#projects" class="btn btn-primary" id="cta-view-projects">
               Xem Dự Án ↓
             </a>
-            <!-- REPLACE: Đổi href="#" thành link CV PDF thực tế nếu có -->
-            <a href="#" class="btn btn-secondary" id="cta-download-cv" download>
-              📄 Tải CV
-            </a>
+            <button class="btn btn-secondary" id="cta-download-cv" onclick="downloadCV()">
+              <span id="cv-btn-text">📄 Tải CV PDF</span>
+            </button>
           </div>
 
           <!-- Stats Row -->
@@ -1090,6 +1092,136 @@
         setTimeout(() => el.classList.add('visible'), i * 80);
       }
     });
+
+    // ── 10. AUTO DOWNLOAD CV PDF ──────────────────────────────
+    function downloadCV() {
+      const btn      = document.getElementById('cta-download-cv');
+      const btnText  = document.getElementById('cv-btn-text');
+
+      // Trạng thái loading
+      btn.disabled   = true;
+      btnText.textContent = '⏳ Đang tạo PDF...';
+
+      // Phần tử cần capture (toàn bộ body trừ modal & back-to-top)
+      const source = document.body;
+
+      const opt = {
+        margin:       [10, 10, 10, 10],   // top, left, bottom, right (mm)
+        filename:     'CV_NguyenMinhNhatAnh_25020022.pdf',
+        image:        { type: 'jpeg', quality: 0.95 },
+        html2canvas:  {
+          scale: 2,              // độ phân giải cao
+          useCORS: true,         // cho phép load ảnh cross-origin
+          logging: false,
+          // Ép background trắng để tránh nền đen trong PDF
+          backgroundColor: '#ffffff',
+          // Ẩn elements không cần in trước khi chụp
+          onclone: (clonedDoc) => {
+            const hide = [
+              '.bg-grid', '.orb', '.orb-1', '.orb-2',
+              '#back-to-top', '.scroll-indicator',
+              '.avatar-ring', '.avatar-ring-inner',
+              '.nav-links', '.nav-toggle',
+              '.section-divider', '.project-filters',
+              '.card-actions', '.hero-cta',
+              '.modal-overlay',
+              '#footer .footer-socials'
+            ];
+            hide.forEach(sel => {
+              clonedDoc.querySelectorAll(sel).forEach(el => {
+                el.style.display = 'none';
+              });
+            });
+
+            // Nền trắng
+            clonedDoc.body.style.background      = '#ffffff';
+            clonedDoc.body.style.color           = '#111111';
+            clonedDoc.documentElement.style.background = '#ffffff';
+
+            // Làm cho tất cả fade-up elements visible
+            clonedDoc.querySelectorAll('.fade-up').forEach(el => {
+              el.style.opacity   = '1';
+              el.style.transform = 'none';
+            });
+
+            // Reset gradient text về màu đơn cho PDF rõ hơn
+            clonedDoc.querySelectorAll('.hero-name').forEach(el => {
+              el.style.webkitTextFillColor = '#1a1a2e';
+              el.style.background = 'none';
+              el.style.color = '#1a1a2e';
+            });
+            clonedDoc.querySelectorAll('.stat-number, .section-title span, .footer-logo-text').forEach(el => {
+              el.style.webkitTextFillColor = '#7B2FBE';
+              el.style.background = 'none';
+              el.style.color = '#7B2FBE';
+            });
+
+            // Reset màu body elements
+            clonedDoc.querySelectorAll(
+              'p, span, li, h1, h2, h3, h4, .card-desc, .card-title, ' +
+              '.hero-desc, .hero-greeting, .section-desc, .quote-text, ' +
+              '.lesson-desc, .rc-value'
+            ).forEach(el => {
+              if (!el.style.color || el.style.color === 'rgb(232, 244, 253)') {
+                el.style.color = '#222222';
+              }
+            });
+
+            // Card & section backgrounds
+            clonedDoc.querySelectorAll(
+              '.project-card, .reflection-card, .lesson-card, .quote-block, .card-body'
+            ).forEach(el => {
+              el.style.background = '#f8f8f8';
+              el.style.border = '1px solid #ddd';
+            });
+
+            // Nav & sections
+            clonedDoc.querySelectorAll('#navbar, section, footer').forEach(el => {
+              el.style.background = '#ffffff';
+            });
+
+            // Ẩn cursor nhấp nháy
+            clonedDoc.querySelectorAll('.cursor').forEach(el => {
+              el.style.display = 'none';
+            });
+
+            // Skill bar fills: đảm bảo hiển thị
+            clonedDoc.querySelectorAll('.skill-bar-fill').forEach(el => {
+              el.style.transform = 'scaleX(1)';
+              el.style.background = '#7B2FBE';
+            });
+          }
+        },
+        jsPDF: {
+          unit: 'mm',
+          format: 'a4',
+          orientation: 'portrait',
+          compress: true
+        },
+        // Ngắt trang tự động, tránh cắt đứt nội dung
+        pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+      };
+
+      html2pdf()
+        .set(opt)
+        .from(source)
+        .save()
+        .then(() => {
+          // Khôi phục nút sau khi tải xong
+          btn.disabled      = false;
+          btnText.textContent = '✅ Đã tải xong!';
+          setTimeout(() => {
+            btnText.textContent = '📄 Tải CV PDF';
+          }, 2500);
+        })
+        .catch(() => {
+          btn.disabled      = false;
+          btnText.textContent = '❌ Lỗi! Thử lại';
+          setTimeout(() => {
+            btnText.textContent = '📄 Tải CV PDF';
+          }, 2500);
+        });
+    }
   </script>
 
 </body>
