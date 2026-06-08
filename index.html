@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <!-- ========================================================
+       DIGITAL PORTFOLIO — Nguyễn Minh Nhật Anh (25020022)
+       Môn: Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo
+       UET — ĐHQGHN  |  2025-2026
+       ======================================================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio cá nhân của Nguyễn Minh Nhật Anh — Sinh viên IT1, UET, ĐHQGHN. Trưng bày 6 bài tập dự án môn Nhập môn Công nghệ số và Ứng dụng TTNT." />
+  <meta name="keywords" content="portfolio, UET, ĐHQGHN, IT1, Nguyễn Minh Nhật Anh, công nghệ số, AI, lập trình Java" />
+  <meta name="author" content="Nguyễn Minh Nhật Anh" />
+
+  <!-- Open Graph (for sharing) -->
+  <meta property="og:title" content="Nguyễn Minh Nhật Anh | Digital Portfolio" />
+  <meta property="og:description" content="Hành trình số hóa và ứng dụng AI của sinh viên IT1 — UET." />
+  <meta property="og:type" content="website" />
+
+  <title>Nguyễn Minh Nhật Anh | Digital Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── ANIMATED BACKGROUND ──────────────────────────────── -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="orb orb-1" aria-hidden="true"></div>
+  <div class="orb orb-2" aria-hidden="true"></div>
+
+  <!-- ── BACK TO TOP BUTTON ───────────────────────────────── -->
+  <button id="back-to-top" aria-label="Về đầu trang" title="Về đầu trang">↑</button>
+
+  <!-- ════════════════════════════════════════════════════════
+       NAVIGATION
+       ════════════════════════════════════════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+
+        <!-- Logo / Brand -->
+        <a href="#home" class="nav-logo" aria-label="Trang chủ">
+          <span class="logo-bracket">{</span>
+          <span class="logo-name">NMNAnh</span>
+          <span class="logo-bracket">}</span>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home"       id="nav-home">Trang Chủ</a></li>
+          <li><a href="#projects"   id="nav-projects">Dự Án</a></li>
+          <li><a href="#reflection" id="nav-reflection">Tổng Kết</a></li>
+          <li><a href="#footer"     id="nav-contact">Liên Hệ</a></li>
+        </ul>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="nav-toggle" id="nav-toggle" aria-label="Mở menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div><!-- /.nav-inner -->
+    </div><!-- /.container -->
+  </nav>
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 1 — GIỚI THIỆU (HOME / HERO)
+       ════════════════════════════════════════════════════════ -->
+  <section id="home" aria-labelledby="hero-heading">
+    <div class="container">
+      <div class="hero-grid">
+
+        <!-- LEFT: Text Content -->
+        <div class="hero-content">
+
+          <!-- Status Badge -->
+          <div class="hero-tag" aria-label="Sinh viên UET đang học">
+            Sinh viên IT1 — UET ĐHQGHN
+          </div>
+
+          <!-- Greeting -->
+          <!-- REPLACE: Thay đổi lời chào nếu muốn -->
+          <p class="hero-greeting">Xin chào 👋, tôi là</p>
+
+          <!-- Full Name — REPLACE text if needed -->
+          <h1 class="hero-name" id="hero-heading">Nguyễn Minh Nhật Anh</h1>
+
+          <!-- Role / Tagline with blinking cursor -->
+          <p class="hero-role">
+            Java Dev &amp; AI Learner<span class="cursor" aria-hidden="true"></span>
+          </p>
+
+          <!-- Short bio -->
+          <!-- REPLACE: Chỉnh sửa nội dung mô tả bản thân tại đây -->
+          <p class="hero-desc">
+            Đam mê lập trình <strong>Java (OOP)</strong>, <strong>Toán học</strong> và <strong>Vật lý</strong>,
+            đang trên hành trình ứng dụng <strong>AI</strong> để tối ưu hóa quy trình phát triển phần mềm
+            và làm game retro. Mục tiêu Portfolio: <em>"Hệ thống hóa kỹ năng số, lưu trữ sản phẩm cá nhân
+            và minh chứng khả năng ứng dụng AI có trách nhiệm."</em>
+          </p>
+
+          <!-- Info Chips (MSSV, Lớp, Trường) -->
+          <!-- REPLACE: Thay thế thông tin cá nhân nếu cần -->
+          <div class="hero-info">
+            <span class="info-chip">
+              <span class="chip-icon">🎓</span>
+              IT1 — UET, ĐHQGHN
+            </span>
+            <span class="info-chip">
+              <span class="chip-icon">🪪</span>
+              MSSV: 25020022
+            </span>
+            <span class="info-chip">
+              <span class="chip-icon">☕</span>
+              Java OOP
+            </span>
+            <span class="info-chip">
+              <span class="chip-icon">🤖</span>
+              AI / Prompt Eng.
+            </span>
+            <span class="info-chip">
+              <span class="chip-icon">🎮</span>
+              Retro Games
+            </span>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary" id="cta-view-projects">
+              Xem Dự Án ↓
+            </a>
+            <!-- REPLACE: Đổi href="#" thành link CV PDF thực tế nếu có -->
+            <a href="#" class="btn btn-secondary" id="cta-download-cv" download>
+              📄 Tải CV
+            </a>
+          </div>
+
+          <!-- Stats Row -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-number">6</div>
+              <div class="stat-label">Bài Tập</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">6</div>
+              <div class="stat-label">Tuần Dự Án</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">∞</div>
+              <div class="stat-label">Đam Mê</div>
+            </div>
+          </div>
+
+        </div><!-- /.hero-content -->
+
+        <!-- RIGHT: Avatar Image -->
+        <div class="hero-visual">
+          <div class="avatar-wrapper">
+            <!-- Rotating gradient ring effect -->
+            <div class="avatar-ring" aria-hidden="true"></div>
+            <div class="avatar-ring-inner" aria-hidden="true"></div>
+
+            <!-- ── AVATAR IMAGE ──────────────────────────────────
+                 REPLACE: Đổi src thành đường dẫn ảnh của bạn.
+                 Ví dụ: src="assets/my-photo.jpg"
+                 Kích thước ảnh nên là hình vuông (ví dụ 400x400px)
+                 ─────────────────────────────────────────────── -->
+            <img
+              class="avatar-img"
+              src="avatar.png"
+              alt="Ảnh đại diện của Nguyễn Minh Nhật Anh"
+              width="320"
+              height="320"
+              loading="eager"
+            />
+
+            <!-- Floating skill badges around avatar -->
+            <div class="avatar-badge badge-java" aria-hidden="true">☕ Java OOP</div>
+            <div class="avatar-badge badge-ai"   aria-hidden="true">🤖 AI Tools</div>
+            <div class="avatar-badge badge-uet"  aria-hidden="true">🏛️ UET</div>
+          </div>
+        </div><!-- /.hero-visual -->
+
+      </div><!-- /.hero-grid -->
+
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator" aria-hidden="true">
+        <span>Cuộn xuống</span>
+        <span class="scroll-arrow">↓</span>
+      </div>
+
+    </div><!-- /.container -->
+  </section><!-- /#home -->
+
+  <!-- Decorative divider -->
+  <div class="section-divider" aria-hidden="true"></div>
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 2 — DỰ ÁN (PROJECTS)
+       ════════════════════════════════════════════════════════ -->
+  <section id="projects" aria-labelledby="projects-heading">
+    <div class="container">
+
+      <!-- Section header -->
+      <div class="projects-header">
+        <span class="section-label">Portfolio</span>
+        <h2 class="section-title" id="projects-heading">
+          Các <span>Dự Án & Bài Tập</span>
+        </h2>
+        <p class="section-desc">
+          Tổng hợp 6 nhiệm vụ thực hành trong 6 tuần dự án môn <em>Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo</em>.
+        </p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="project-filters" role="group" aria-label="Lọc theo loại bài tập">
+        <button class="filter-btn active" id="filter-all" data-filter="all">Tất cả</button>
+        <button class="filter-btn" id="filter-digital" data-filter="digital">Kỹ năng số</button>
+        <button class="filter-btn" id="filter-ai" data-filter="ai">AI Tools</button>
+        <button class="filter-btn" id="filter-collab" data-filter="collab">Hợp tác</button>
+      </div>
+
+      <!-- ── PROJECTS GRID ────────────────────────────────── -->
+      <div class="projects-grid" id="projects-grid">
+
+        <!-- ── CARD 1 ─────────────────────────────────────── -->
+        <!-- REPLACE: Thay thế mô tả và hình ảnh minh chứng -->
+        <article class="project-card fade-up stagger-1" data-category="digital" aria-labelledby="card-title-1">
+          <div class="card-banner card-banner-1">
+            <!-- REPLACE: Đổi thẻ div này thành <img src="assets/bt1.png" alt="Minh chứng bài tập 1"> -->
+            <!-- Ví dụ: <img src="assets/bt1-screenshot.png" alt="Ảnh chụp màn hình thao tác tệp tin"> -->
+            <div class="banner-icon" aria-hidden="true">📁</div>
+          </div>
+          <div class="card-number" aria-label="Bài tập số 1">BT_01</div>
+          <div class="card-body">
+            <span class="card-category">Kỹ năng số</span>
+            <h3 class="card-title" id="card-title-1">
+              Thao tác cơ bản với tệp tin và thư mục
+            </h3>
+            <!-- REPLACE: Sửa mô tả ngắn bên dưới theo nội dung bài làm thực tế -->
+            <p class="card-desc">
+              Xây dựng quy tắc đặt tên và tổ chức dữ liệu theo chuẩn: phân cấp thư mục hợp lý,
+              đặt tên file có nghĩa (YYYYMMDD_tenfile_v1), tránh ký tự đặc biệt, dễ tìm kiếm và quản lý dài hạn.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">Windows Explorer</span>
+              <span class="card-tag">File Naming</span>
+              <span class="card-tag">Data Organization</span>
+            </div>
+            <div class="card-actions">
+              <button
+                class="card-btn card-btn-detail"
+                id="btn-detail-1"
+                data-modal="modal-1"
+                aria-haspopup="dialog"
+                aria-controls="modal-1"
+              >
+                🔍 Xem Chi Tiết
+              </button>
+              <!-- REPLACE: Đổi href="#" thành link PDF thực tế, ví dụ href="pdfs/BT01_25020022.pdf" -->
+              <a href="#" class="card-btn card-btn-pdf" id="btn-pdf-1" download>
+                📥 Tải PDF
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── CARD 2 ─────────────────────────────────────── -->
+        <article class="project-card fade-up stagger-2" data-category="digital" aria-labelledby="card-title-2">
+          <div class="card-banner card-banner-2">
+            <!-- REPLACE: <img src="assets/bt2-screenshot.png" alt="Ảnh chụp kết quả tìm kiếm học thuật"> -->
+            <div class="banner-icon" aria-hidden="true">🔬</div>
+          </div>
+          <div class="card-number" aria-label="Bài tập số 2">BT_02</div>
+          <div class="card-body">
+            <span class="card-category">Kỹ năng số</span>
+            <h3 class="card-title" id="card-title-2">
+              Tìm kiếm và đánh giá thông tin học thuật
+            </h3>
+            <!-- REPLACE: Sửa mô tả theo kết quả bài làm thực tế -->
+            <p class="card-desc">
+              Áp dụng toán tử tìm kiếm nâng cao (Boolean, site:, filetype:) trên Google Scholar,
+              Semantic Scholar; kỹ thuật Snowballing để mở rộng nguồn tài liệu và đánh giá độ tin cậy theo tiêu chí CRAAP.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">Google Scholar</span>
+              <span class="card-tag">Boolean Operators</span>
+              <span class="card-tag">Snowballing</span>
+              <span class="card-tag">CRAAP Test</span>
+            </div>
+            <div class="card-actions">
+              <button
+                class="card-btn card-btn-detail"
+                id="btn-detail-2"
+                data-modal="modal-2"
+                aria-haspopup="dialog"
+                aria-controls="modal-2"
+              >
+                🔍 Xem Chi Tiết
+              </button>
+              <!-- REPLACE: href="pdfs/BT02_25020022.pdf" -->
+              <a href="#" class="card-btn card-btn-pdf" id="btn-pdf-2" download>📥 Tải PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── CARD 3 ─────────────────────────────────────── -->
+        <article class="project-card fade-up stagger-3" data-category="ai" aria-labelledby="card-title-3">
+          <div class="card-banner card-banner-3">
+            <!-- REPLACE: <img src="assets/bt3-screenshot.png" alt="Ảnh chụp prompt engineering"> -->
+            <div class="banner-icon" aria-hidden="true">✍️</div>
+          </div>
+          <div class="card-number" aria-label="Bài tập số 3">BT_03</div>
+          <div class="card-body">
+            <span class="card-category">AI Tools</span>
+            <h3 class="card-title" id="card-title-3">
+              Viết Prompt hiệu quả cho các tác vụ học tập
+            </h3>
+            <!-- REPLACE: Sửa mô tả theo nội dung bài -->
+            <p class="card-desc">
+              Thực hành các kỹ thuật Prompt Engineering: <strong>Role Prompting</strong> (gán vai trò chuyên gia cho AI),
+              <strong>Chain-of-Thought (CoT)</strong> (hướng dẫn lý luận từng bước) và <strong>Few-shot</strong> (cung cấp ví dụ mẫu).
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">Role Prompting</span>
+              <span class="card-tag">CoT</span>
+              <span class="card-tag">Few-shot</span>
+              <span class="card-tag">ChatGPT</span>
+            </div>
+            <div class="card-actions">
+              <button
+                class="card-btn card-btn-detail"
+                id="btn-detail-3"
+                data-modal="modal-3"
+                aria-haspopup="dialog"
+                aria-controls="modal-3"
+              >
+                🔍 Xem Chi Tiết
+              </button>
+              <!-- REPLACE: href="pdfs/BT03_25020022.pdf" -->
+              <a href="#" class="card-btn card-btn-pdf" id="btn-pdf-3" download>📥 Tải PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── CARD 4 ─────────────────────────────────────── -->
+        <article class="project-card fade-up stagger-4" data-category="collab" aria-labelledby="card-title-4">
+          <div class="card-banner card-banner-4">
+            <!-- REPLACE: <img src="assets/bt4-screenshot.png" alt="Ảnh chụp Trello / Discord dự án VioGuard"> -->
+            <div class="banner-icon" aria-hidden="true">🤝</div>
+          </div>
+          <div class="card-number" aria-label="Bài tập số 4">BT_04</div>
+          <div class="card-body">
+            <span class="card-category">Hợp tác</span>
+            <h3 class="card-title" id="card-title-4">
+              Sử dụng công cụ hợp tác trực tuyến
+            </h3>
+            <!-- REPLACE: Sửa mô tả và thêm link dự án VioGuard thực tế nếu có -->
+            <p class="card-desc">
+              Dự án <strong>VioGuard</strong>: ứng dụng Trello để quản lý Kanban, Discord để giao tiếp nhóm
+              và Google Workspace (Docs/Slides) để đồng chỉnh sửa tài liệu theo thời gian thực.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">Trello</span>
+              <span class="card-tag">Discord</span>
+              <span class="card-tag">Google Workspace</span>
+              <span class="card-tag">Kanban</span>
+            </div>
+            <div class="card-actions">
+              <button
+                class="card-btn card-btn-detail"
+                id="btn-detail-4"
+                data-modal="modal-4"
+                aria-haspopup="dialog"
+                aria-controls="modal-4"
+              >
+                🔍 Xem Chi Tiết
+              </button>
+              <!-- REPLACE: href="pdfs/BT04_25020022.pdf" -->
+              <a href="#" class="card-btn card-btn-pdf" id="btn-pdf-4" download>📥 Tải PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── CARD 5 ─────────────────────────────────────── -->
+        <article class="project-card fade-up stagger-5" data-category="ai" aria-labelledby="card-title-5">
+          <div class="card-banner card-banner-5">
+            <!-- REPLACE: <img src="assets/bt5-dalle.png" alt="Ảnh DALL-E / Google Stitch được tạo bởi AI"> -->
+            <div class="banner-icon" aria-hidden="true">🎨</div>
+          </div>
+          <div class="card-number" aria-label="Bài tập số 5">BT_05</div>
+          <div class="card-body">
+            <span class="card-category">AI Tools</span>
+            <h3 class="card-title" id="card-title-5">
+              Sử dụng AI tạo sinh sáng tạo nội dung
+            </h3>
+            <!-- REPLACE: Sửa mô tả, thêm link sản phẩm AI đã tạo nếu có -->
+            <p class="card-desc">
+              Tích hợp đa nền tảng AI sinh nội dung: <strong>ChatGPT</strong> &amp; <strong>Gemini</strong> (văn bản),
+              <strong>DALL-E</strong> (hình ảnh minh họa), <strong>Google Stitch</strong> (thiết kế UI), tuân thủ quy tắc trích dẫn AI.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">ChatGPT</span>
+              <span class="card-tag">Gemini</span>
+              <span class="card-tag">DALL-E</span>
+              <span class="card-tag">Google Stitch</span>
+            </div>
+            <div class="card-actions">
+              <button
+                class="card-btn card-btn-detail"
+                id="btn-detail-5"
+                data-modal="modal-5"
+                aria-haspopup="dialog"
+                aria-controls="modal-5"
+              >
+                🔍 Xem Chi Tiết
+              </button>
+              <!-- REPLACE: href="pdfs/BT05_25020022.pdf" -->
+              <a href="#" class="card-btn card-btn-pdf" id="btn-pdf-5" download>📥 Tải PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── CARD 6 ─────────────────────────────────────── -->
+        <article class="project-card fade-up stagger-6" data-category="ai" aria-labelledby="card-title-6">
+          <div class="card-banner card-banner-6">
+            <!-- REPLACE: <img src="assets/bt6-infographic.png" alt="Infographic 7 nguyên tắc vàng AI"> -->
+            <div class="banner-icon" aria-hidden="true">⚖️</div>
+          </div>
+          <div class="card-number" aria-label="Bài tập số 6">BT_06</div>
+          <div class="card-body">
+            <span class="card-category">AI Tools</span>
+            <h3 class="card-title" id="card-title-6">
+              Sử dụng AI có trách nhiệm
+            </h3>
+            <!-- REPLACE: Sửa mô tả theo nội dung bài -->
+            <p class="card-desc">
+              Xây dựng bộ <strong>7 Nguyên Tắc Vàng</strong> trong học thuật khi dùng AI: Minh bạch, Chính trực,
+              Không gian lận, Kiểm chứng, Bảo mật dữ liệu, Không phân biệt đối xử, và Phát triển bền vững.
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">AI Ethics</span>
+              <span class="card-tag">Academic Integrity</span>
+              <span class="card-tag">Responsible AI</span>
+            </div>
+            <div class="card-actions">
+              <button
+                class="card-btn card-btn-detail"
+                id="btn-detail-6"
+                data-modal="modal-6"
+                aria-haspopup="dialog"
+                aria-controls="modal-6"
+              >
+                🔍 Xem Chi Tiết
+              </button>
+              <!-- REPLACE: href="pdfs/BT06_25020022.pdf" -->
+              <a href="#" class="card-btn card-btn-pdf" id="btn-pdf-6" download>📥 Tải PDF</a>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /#projects-grid -->
+    </div><!-- /.container -->
+  </section><!-- /#projects -->
+
+  <!-- Divider -->
+  <div class="section-divider" aria-hidden="true"></div>
+
+  <!-- ════════════════════════════════════════════════════════
+       SECTION 3 — TỔNG KẾT (REFLECTION)
+       ════════════════════════════════════════════════════════ -->
+  <section id="reflection" aria-labelledby="reflection-heading">
+    <div class="container">
+
+      <div class="reflection-inner">
+
+        <!-- LEFT: Sidebar info cards -->
+        <aside class="reflection-sidebar">
+
+          <!-- Info Card: Course -->
+          <div class="reflection-card fade-up">
+            <div class="rc-icon">📚</div>
+            <div class="rc-title">Môn học</div>
+            <!-- REPLACE: Cập nhật tên môn học nếu khác -->
+            <div class="rc-value">Nhập môn CNS & AI</div>
+          </div>
+
+          <!-- Info Card: Semester -->
+          <div class="reflection-card fade-up stagger-1">
+            <div class="rc-icon">📅</div>
+            <div class="rc-title">Học kỳ</div>
+            <!-- REPLACE: Cập nhật học kỳ -->
+            <div class="rc-value">HK1 — 2025/2026</div>
+          </div>
+
+          <!-- Info Card: Tools used -->
+          <div class="reflection-card fade-up stagger-2">
+            <div class="rc-icon">🛠️</div>
+            <div class="rc-title">Công cụ đã dùng</div>
+            <div class="rc-value">ChatGPT · Gemini · DALL-E · Trello · Google Workspace</div>
+          </div>
+
+          <!-- Skills with progress bars -->
+          <div class="reflection-card fade-up stagger-3">
+            <div class="rc-icon">📊</div>
+            <div class="rc-title">Mức độ thành thạo</div>
+            <div class="skill-bar-group">
+
+              <!-- REPLACE: Điều chỉnh % theo cảm nhận thực tế của bạn -->
+              <div>
+                <div class="skill-bar-label">
+                  <span>Prompt Engineering</span>
+                  <span>85%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="0.85" style="width:85%"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="skill-bar-label">
+                  <span>Tìm kiếm học thuật</span>
+                  <span>80%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="0.80" style="width:80%"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="skill-bar-label">
+                  <span>Hợp tác trực tuyến</span>
+                  <span>75%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="0.75" style="width:75%"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="skill-bar-label">
+                  <span>AI có trách nhiệm</span>
+                  <span>90%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="0.90" style="width:90%"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </aside><!-- /.reflection-sidebar -->
+
+        <!-- RIGHT: Main reflection content -->
+        <div class="reflection-main fade-up stagger-2">
+
+          <span class="section-label">Nhìn Lại</span>
+          <h2 class="section-title" id="reflection-heading">
+            Hành Trình <span>Tổng Kết</span>
+          </h2>
+
+          <!-- MAIN QUOTE BLOCK -->
+          <div class="quote-block">
+            <span class="quote-icon" aria-hidden="true">"</span>
+
+            <!-- REPLACE: Thay thế nội dung tổng kết của bạn tại đây -->
+            <p class="quote-text">
+              Trải qua <em>6 tuần dự án</em>, tôi đã chuyển đổi từ việc dùng các công cụ số rời rạc sang
+              việc xây dựng một <em>hệ sinh thái làm việc khép kín</em>. Việc áp dụng các kỹ thuật
+              <em>Prompt Engineering</em> và quy tắc <em>60/40</em> giúp tôi làm chủ AI, biến nó thành
+              trợ thủ đắc lực thay vì lệ thuộc, tạo bước đệm vững chắc cho con đường trở thành
+              <em>Software Engineer</em>.
+            </p>
+
+            <!-- Author signature -->
+            <div class="quote-author">
+              <div class="qa-avatar" aria-hidden="true">NA</div>
+              <div class="qa-info">
+                <div class="qa-name">Nguyễn Minh Nhật Anh</div>
+                <!-- REPLACE: Cập nhật ngày nộp / địa danh -->
+                <div class="qa-role">IT1 — UET ĐHQGHN · Tháng 6/2026</div>
+              </div>
+            </div>
+          </div><!-- /.quote-block -->
+
+          <!-- Lessons Learned Grid -->
+          <div class="lessons-grid">
+
+            <!-- REPLACE: Thêm/sửa các bài học theo nội dung thực tế -->
+            <div class="lesson-card fade-up stagger-1">
+              <div class="lesson-icon">🗂️</div>
+              <div class="lesson-title">Kỹ năng tổ chức</div>
+              <div class="lesson-desc">Xây dựng hệ thống tệp tin chuẩn hóa, tiết kiệm thời gian tìm kiếm.</div>
+            </div>
+
+            <div class="lesson-card fade-up stagger-2">
+              <div class="lesson-icon">🔎</div>
+              <div class="lesson-title">Tư duy phản biện</div>
+              <div class="lesson-desc">Đánh giá nguồn thông tin bằng tiêu chí CRAAP, không tin mù quáng.</div>
+            </div>
+
+            <div class="lesson-card fade-up stagger-3">
+              <div class="lesson-icon">🤖</div>
+              <div class="lesson-title">Chủ động với AI</div>
+              <div class="lesson-desc">Nắm vững Prompt Engineering để AI phục vụ mục đích học thuật đúng đắn.</div>
+            </div>
+
+            <div class="lesson-card fade-up stagger-4">
+              <div class="lesson-icon">⚖️</div>
+              <div class="lesson-title">Đạo đức số</div>
+              <div class="lesson-desc">Áp dụng 7 nguyên tắc AI có trách nhiệm trong mọi tác vụ học thuật.</div>
+            </div>
+
+          </div><!-- /.lessons-grid -->
+
+        </div><!-- /.reflection-main -->
+
+      </div><!-- /.reflection-inner -->
+    </div><!-- /.container -->
+  </section><!-- /#reflection -->
+
+  <!-- Divider -->
+  <div class="section-divider" aria-hidden="true"></div>
+
+  <!-- ════════════════════════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════════════════════════ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner">
+
+        <!-- Brand -->
+        <div>
+          <div class="footer-logo-text">{ NMNAnh.dev }</div>
+          <!-- REPLACE: Thay tagline nếu muốn -->
+          <div class="footer-tagline">Hành trình số hóa — UET · ĐHQGHN</div>
+        </div>
+
+        <!-- Social Links -->
+        <!-- REPLACE: Đổi href="#" thành link GitHub, LinkedIn, Email thực của bạn -->
+        <div class="footer-socials">
+
+          <a
+            href="#"
+            class="social-link"
+            id="link-github"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <!-- GitHub SVG icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+          </a>
+
+          <a
+            href="#"
+            class="social-link"
+            id="link-linkedin"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            title="LinkedIn"
+          >
+            <!-- LinkedIn SVG icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+
+          <a
+            href="mailto:your.email@example.com"
+            class="social-link"
+            id="link-email"
+            aria-label="Gửi Email"
+            title="Email"
+          >
+            <!-- Email icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+          </a>
+
+        </div><!-- /.footer-socials -->
+
+        <!-- Copyright -->
+        <!-- REPLACE: Kiểm tra năm và thông tin -->
+        <p class="footer-copyright">
+          © 2026 Nguyễn Minh Nhật Anh — 25020022. All rights reserved.<br/>
+          IT1 — Trường Đại học Công nghệ, ĐHQGHN (UET)
+        </p>
+
+      </div><!-- /.footer-inner -->
+    </div><!-- /.container -->
+  </footer>
+
+  <!-- ════════════════════════════════════════════════════════
+       MODALS — Detail Popups for Each Project Card
+       ════════════════════════════════════════════════════════ -->
+
+  <!-- ── MODAL 1 ────────────────────────────────────────────── -->
+  <div class="modal-overlay" id="modal-1" role="dialog" aria-modal="true" aria-labelledby="modal-title-1">
+    <div class="modal">
+      <button class="modal-close" id="close-modal-1" aria-label="Đóng">✕</button>
+      <div class="modal-label">BT_01 · Kỹ năng số</div>
+      <h3 class="modal-title" id="modal-title-1">Thao tác cơ bản với tệp tin và thư mục</h3>
+      <div class="modal-divider"></div>
+      <div class="modal-body">
+
+        <!-- REPLACE: Đổi div này thành <img src="assets/bt1.png" ...> khi có ảnh minh chứng -->
+        <div class="modal-img-placeholder" aria-label="Vùng chứa ảnh minh chứng bài tập 1">
+          <span>📸</span>
+          <span>Đặt ảnh chụp màn hình minh chứng tại đây</span>
+          <span style="font-size:0.7rem;opacity:.6;">(Thay thẻ div này bằng thẻ &lt;img src="..."&gt;)</span>
+        </div>
+
+        <!-- REPLACE: Bổ sung nội dung chi tiết bài làm -->
+        <p>Trong bài tập này, em thực hành xây dựng cấu trúc thư mục chuẩn hóa cho dự án học tập suốt học kỳ, áp dụng quy tắc đặt tên có tổ chức giúp tìm kiếm nhanh và tránh nhầm lẫn phiên bản.</p>
+        <h4>Quy tắc đặt tên áp dụng:</h4>
+        <ul>
+          <li><code>YYYYMMDD_TenFile_v[N].[ext]</code> — Ngày tháng đứng đầu để sắp xếp chronologically</li>
+          <li>Không dùng dấu tiếng Việt, khoảng trắng, hoặc ký tự đặc biệt</li>
+          <li>Dùng snake_case hoặc PascalCase nhất quán trong cùng một dự án</li>
+          <li>Thư mục phân cấp: <code>01_Raw → 02_Working → 03_Final → 04_Archive</code></li>
+        </ul>
+        <!-- REPLACE: Bổ sung nhận xét cá nhân -->
+        <h4>Nhận xét:</h4>
+        <p>Thói quen đặt tên đúng cách giúp em tiết kiệm đáng kể thời gian tìm kiếm file và tránh việc nộp nhầm phiên bản cũ. Đây là kỹ năng nền tảng cần thiết trước khi học đến Git và version control.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MODAL 2 ────────────────────────────────────────────── -->
+  <div class="modal-overlay" id="modal-2" role="dialog" aria-modal="true" aria-labelledby="modal-title-2">
+    <div class="modal">
+      <button class="modal-close" id="close-modal-2" aria-label="Đóng">✕</button>
+      <div class="modal-label">BT_02 · Kỹ năng số</div>
+      <h3 class="modal-title" id="modal-title-2">Tìm kiếm và đánh giá thông tin học thuật</h3>
+      <div class="modal-divider"></div>
+      <div class="modal-body">
+        <!-- REPLACE: Đổi thành <img src="assets/bt2.png"> -->
+        <div class="modal-img-placeholder">
+          <span>📸</span>
+          <span>Ảnh chụp kết quả tìm kiếm trên Google Scholar / Semantic Scholar</span>
+        </div>
+        <!-- REPLACE: Nội dung chi tiết -->
+        <p>Bài tập rèn luyện kỹ năng tìm kiếm chuyên sâu bằng toán tử Boolean và các platform học thuật, kết hợp kỹ thuật Snowballing để mở rộng tài liệu tham khảo theo cả chiều xuôi và ngược.</p>
+        <h4>Toán tử nâng cao đã dùng:</h4>
+        <ul>
+          <li><code>AND, OR, NOT</code> — kết hợp/loại từ khóa</li>
+          <li><code>"machine learning"</code> — tìm cụm từ chính xác</li>
+          <li><code>site:scholar.google.com</code> và <code>filetype:pdf</code></li>
+          <li>Lọc theo năm (sau 2020), số trích dẫn &gt; 50</li>
+        </ul>
+        <h4>Tiêu chí CRAAP đánh giá nguồn:</h4>
+        <ul>
+          <li><strong>Currency</strong> — Độ cập nhật</li>
+          <li><strong>Relevance</strong> — Độ liên quan</li>
+          <li><strong>Authority</strong> — Uy tín tác giả</li>
+          <li><strong>Accuracy</strong> — Độ chính xác</li>
+          <li><strong>Purpose</strong> — Mục đích xuất bản</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MODAL 3 ────────────────────────────────────────────── -->
+  <div class="modal-overlay" id="modal-3" role="dialog" aria-modal="true" aria-labelledby="modal-title-3">
+    <div class="modal">
+      <button class="modal-close" id="close-modal-3" aria-label="Đóng">✕</button>
+      <div class="modal-label">BT_03 · AI Tools</div>
+      <h3 class="modal-title" id="modal-title-3">Viết Prompt hiệu quả cho các tác vụ học tập</h3>
+      <div class="modal-divider"></div>
+      <div class="modal-body">
+        <!-- REPLACE: <img src="assets/bt3.png"> -->
+        <div class="modal-img-placeholder">
+          <span>📸</span>
+          <span>Ảnh chụp prompt mẫu và kết quả từ ChatGPT / Gemini</span>
+        </div>
+        <!-- REPLACE: Nội dung chi tiết -->
+        <p>Bài tập thực hành 3 kỹ thuật Prompt Engineering chính, so sánh chất lượng đầu ra của AI khi dùng prompt thô vs. prompt được thiết kế tốt.</p>
+        <h4>Kỹ thuật đã thực hành:</h4>
+        <ul>
+          <li><strong>Role Prompting:</strong> "Hãy đóng vai một giáo sư Toán đang giảng giải..."</li>
+          <li><strong>Chain-of-Thought (CoT):</strong> "Giải bài toán này từng bước một: Bước 1:..."</li>
+          <li><strong>Few-shot:</strong> Cung cấp 2–3 ví dụ mẫu trước khi yêu cầu AI làm tương tự</li>
+        </ul>
+        <!-- REPLACE: Kết quả và nhận xét -->
+        <h4>Kết luận:</h4>
+        <p>Chất lượng đầu ra cải thiện rõ rệt (ước tính 60–80%) khi sử dụng CoT kết hợp Role Prompting so với yêu cầu mơ hồ.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MODAL 4 ────────────────────────────────────────────── -->
+  <div class="modal-overlay" id="modal-4" role="dialog" aria-modal="true" aria-labelledby="modal-title-4">
+    <div class="modal">
+      <button class="modal-close" id="close-modal-4" aria-label="Đóng">✕</button>
+      <div class="modal-label">BT_04 · Hợp tác</div>
+      <h3 class="modal-title" id="modal-title-4">Sử dụng công cụ hợp tác trực tuyến — Dự án VioGuard</h3>
+      <div class="modal-divider"></div>
+      <div class="modal-body">
+        <!-- REPLACE: <img src="assets/bt4-trello.png"> -->
+        <div class="modal-img-placeholder">
+          <span>📸</span>
+          <span>Ảnh chụp bảng Kanban Trello / Discord server dự án VioGuard</span>
+        </div>
+        <!-- REPLACE: Nội dung chi tiết -->
+        <p>Dự án <strong>VioGuard</strong> là sản phẩm nhóm được phối hợp hoàn toàn bằng công cụ số, không cần gặp mặt trực tiếp. Quy trình Agile với Kanban được triển khai xuyên suốt.</p>
+        <h4>Công cụ và vai trò:</h4>
+        <ul>
+          <li><strong>Trello:</strong> Quản lý task theo Kanban (To Do / In Progress / Done)</li>
+          <li><strong>Discord:</strong> Kênh giao tiếp nhóm, standup hàng ngày, chia sẻ tài liệu</li>
+          <li><strong>Google Docs/Slides:</strong> Đồng chỉnh sửa báo cáo theo thời gian thực</li>
+          <li><strong>Google Meet:</strong> Họp sprint review cuối tuần</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MODAL 5 ────────────────────────────────────────────── -->
+  <div class="modal-overlay" id="modal-5" role="dialog" aria-modal="true" aria-labelledby="modal-title-5">
+    <div class="modal">
+      <button class="modal-close" id="close-modal-5" aria-label="Đóng">✕</button>
+      <div class="modal-label">BT_05 · AI Tools</div>
+      <h3 class="modal-title" id="modal-title-5">Sử dụng AI tạo sinh sáng tạo nội dung</h3>
+      <div class="modal-divider"></div>
+      <div class="modal-body">
+        <!-- REPLACE: <img src="assets/bt5-dalle.png"> (ảnh do DALL-E tạo ra) -->
+        <div class="modal-img-placeholder">
+          <span>🎨</span>
+          <span>Đặt ảnh do DALL-E / Google Stitch tạo ra tại đây</span>
+        </div>
+        <!-- REPLACE: Nội dung chi tiết, thêm link sản phẩm nếu có -->
+        <p>Bài tập khám phá tiềm năng của AI sinh nội dung đa phương thức, đồng thời thực hành khai báo nguồn AI đúng chuẩn học thuật.</p>
+        <h4>Sản phẩm đã tạo:</h4>
+        <ul>
+          <li>Bài viết blog về Java OOP (ChatGPT + chỉnh sửa thủ công)</li>
+          <li>Infographic nguyên tắc Prompt Engineering (DALL-E + Canva)</li>
+          <li>Prototype UI màn hình app (Google Stitch)</li>
+          <li>Tóm tắt tài liệu học thuật (Gemini Advanced)</li>
+        </ul>
+        <h4>Trích dẫn AI đúng cách:</h4>
+        <p>Mọi nội dung do AI tạo ra đều được ghi chú: "Tạo bởi [Tên AI], ngày [DD/MM/YYYY], chỉnh sửa bởi tác giả."</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MODAL 6 ────────────────────────────────────────────── -->
+  <div class="modal-overlay" id="modal-6" role="dialog" aria-modal="true" aria-labelledby="modal-title-6">
+    <div class="modal">
+      <button class="modal-close" id="close-modal-6" aria-label="Đóng">✕</button>
+      <div class="modal-label">BT_06 · AI Ethics</div>
+      <h3 class="modal-title" id="modal-title-6">Sử dụng AI có trách nhiệm — Bộ 7 Nguyên Tắc Vàng</h3>
+      <div class="modal-divider"></div>
+      <div class="modal-body">
+        <!-- REPLACE: <img src="assets/bt6-infographic.png"> (infographic 7 nguyên tắc) -->
+        <div class="modal-img-placeholder">
+          <span>⚖️</span>
+          <span>Đặt infographic 7 nguyên tắc vàng AI tại đây</span>
+        </div>
+        <!-- REPLACE: Điền 7 nguyên tắc theo nội dung bài -->
+        <p>Bộ 7 nguyên tắc được xây dựng dựa trên UNESCO AI Ethics Guidelines và hướng dẫn của nhà trường, áp dụng cho bối cảnh học thuật đại học.</p>
+        <h4>7 Nguyên Tắc Vàng:</h4>
+        <ul>
+          <li>① <strong>Minh bạch:</strong> Luôn khai báo khi dùng AI trong bài</li>
+          <li>② <strong>Chính trực học thuật:</strong> Không nộp nội dung AI thuần túy</li>
+          <li>③ <strong>Kiểm chứng:</strong> Xác minh mọi thông tin AI cung cấp</li>
+          <li>④ <strong>Bảo mật dữ liệu:</strong> Không chia sẻ thông tin cá nhân/nhạy cảm với AI</li>
+          <li>⑤ <strong>Không phân biệt:</strong> Phát hiện và chỉnh sửa bias trong output AI</li>
+          <li>⑥ <strong>Phát triển bền vững:</strong> Ưu tiên giải pháp tiết kiệm tài nguyên</li>
+          <li>⑦ <strong>Trách nhiệm con người:</strong> Người dùng chịu trách nhiệm cuối cùng với sản phẩm</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════
+       JAVASCRIPT — Interactions
+       ════════════════════════════════════════════════════════ -->
+  <script>
+    // ── 1. STICKY NAV: add .scrolled class on scroll ─────────
+    const navbar = document.getElementById('navbar');
+    const backToTop = document.getElementById('back-to-top');
+
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+
+      // Navbar background
+      navbar.classList.toggle('scrolled', scrollY > 50);
+
+      // Back-to-top button visibility
+      backToTop.classList.toggle('visible', scrollY > 300);
+
+      // Active nav link on scroll
+      updateActiveNav();
+    }, { passive: true });
+
+    // ── 2. BACK TO TOP ────────────────────────────────────────
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ── 3. MOBILE HAMBURGER TOGGLE ───────────────────────────
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks  = document.getElementById('nav-links');
+
+    navToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.classList.toggle('active', isOpen);
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close mobile menu when a link is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // ── 4. ACTIVE NAV HIGHLIGHT (scroll spy) ─────────────────
+    const sections   = ['home', 'projects', 'reflection', 'footer'];
+    const navAnchors = {
+      home:       document.getElementById('nav-home'),
+      projects:   document.getElementById('nav-projects'),
+      reflection: document.getElementById('nav-reflection'),
+      footer:     document.getElementById('nav-contact'),
+    };
+
+    function updateActiveNav() {
+      let current = 'home';
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= 120) {
+          current = id;
+        }
+      });
+      Object.values(navAnchors).forEach(a => a && a.classList.remove('active'));
+      if (navAnchors[current]) navAnchors[current].classList.add('active');
+    }
+
+    // ── 5. SCROLL ANIMATION (Intersection Observer) ──────────
+    const fadeEls = document.querySelectorAll('.fade-up');
+    const skillBars = document.querySelectorAll('.skill-bar-fill');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+    fadeEls.forEach(el => observer.observe(el));
+
+    // Skill bars animation on intersection
+    const barObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+          barObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    skillBars.forEach(bar => {
+      // Reset initial scale via JS to ensure animation works
+      bar.style.transform = 'scaleX(0)';
+      barObserver.observe(bar);
+    });
+
+    // ── 6. PROJECT CARD FILTER ────────────────────────────────
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+
+        // Update active button
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Filter cards
+        projectCards.forEach(card => {
+          const category = card.dataset.category;
+          const show = filter === 'all' || category === filter;
+          card.style.opacity = show ? '1' : '0.25';
+          card.style.transform = show ? '' : 'scale(0.97)';
+          card.style.pointerEvents = show ? '' : 'none';
+        });
+      });
+    });
+
+    // ── 7. MODAL OPEN / CLOSE ─────────────────────────────────
+    // Open modals via "Xem Chi Tiết" buttons
+    document.querySelectorAll('[data-modal]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const modalId = btn.dataset.modal;
+        const modal   = document.getElementById(modalId);
+        if (modal) {
+          modal.classList.add('open');
+          document.body.style.overflow = 'hidden'; // prevent background scroll
+          // Focus first focusable element in modal
+          const focusTarget = modal.querySelector('button, [href], input');
+          if (focusTarget) focusTarget.focus();
+        }
+      });
+    });
+
+    // Close via ✕ button
+    document.querySelectorAll('.modal-close').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const modal = btn.closest('.modal-overlay');
+        closeModal(modal);
+      });
+    });
+
+    // Close on overlay background click
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) closeModal(overlay);
+      });
+    });
+
+    // Close on ESC key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.open').forEach(closeModal);
+      }
+    });
+
+    function closeModal(modal) {
+      if (modal) {
+        modal.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    }
+
+    // ── 8. TYPED TEXT EFFECT for hero role ───────────────────
+    const roles = [
+      'Java Dev & AI Learner',
+      'Sinh viên IT1 — UET',
+      'Prompt Engineer',
+      'Retro Game Maker',
+    ];
+    let roleIdx = 0, charIdx = 0, isDeleting = false;
+    const roleEl = document.querySelector('.hero-role');
+
+    function typeRole() {
+      if (!roleEl) return;
+      const current = roles[roleIdx];
+
+      if (!isDeleting) {
+        charIdx++;
+        if (charIdx > current.length) {
+          isDeleting = true;
+          setTimeout(typeRole, 1800); // pause before deleting
+          return;
+        }
+      } else {
+        charIdx--;
+        if (charIdx < 0) {
+          isDeleting = false;
+          roleIdx = (roleIdx + 1) % roles.length;
+          setTimeout(typeRole, 400);
+          return;
+        }
+      }
+
+      roleEl.innerHTML = current.slice(0, charIdx) + '<span class="cursor" aria-hidden="true"></span>';
+      setTimeout(typeRole, isDeleting ? 50 : 80);
+    }
+
+    // Start typing effect after short delay
+    setTimeout(typeRole, 1000);
+
+    // ── 9. SMOOTH SECTION ENTRY on page load ─────────────────
+    document.querySelectorAll('.fade-up').forEach((el, i) => {
+      // Trigger visible for hero section items immediately
+      if (el.closest('#home')) {
+        setTimeout(() => el.classList.add('visible'), i * 80);
+      }
+    });
+  </script>
+
+</body>
+</html>
